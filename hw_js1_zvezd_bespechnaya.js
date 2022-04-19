@@ -84,23 +84,21 @@ checkAge('2a')
 // 4***:
 // Преобразовать задание 3* таким образом, чтобы возраст вводится используя функцию prompt в привязанной верстке
 
-let userAge = prompt("Your age:")
-checkAge(userAge)
- function checkAge(userAge) {
-    let age_2 = 18
-    let age_3 = 60
-    if (isNaN(userAge)){
-        alert('error')
-    }
-    else {
-            if (userAge < age_2) {
-                alert("You don’t have access cause your age is", + userAge, "It’s less than 18")
-            }
-            else if (userAge >= age_2 && userAge < age_3) {
-                alert("Welcome!")
-            } 
-            else if (userAge >= age_3) {
-                alert("Keep calm and look Culture channe")
-            }
+let age = prompt('Enter your age:')
+checkAge(age)
+let age_2 = 18;
+let age_3 = 60;
+
+function checkAge(age){
+    if(isNaN(Number(age))){
+        alert("ERROR")
+    } else {
+        if (age < age_2){
+            alert('You don’t have access cause your age is' + ' ' + age + '. ' + 'It’s less then' + ' ' + age_2);
+        } else if(age >= age_2 && age < age_3){
+            alert('Welcome');
+        } else if(age >= age_3){
+            alert('Keep calm and look Culture channel');
         } 
+    }  
 }
